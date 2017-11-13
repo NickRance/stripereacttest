@@ -1,0 +1,1 @@
+Familiarizing myself with the Stripe React Elements by trying to replicate [these forms](https://github.com/stripe/elements-examples/#example-5)

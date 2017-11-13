@@ -1,0 +1,83 @@
+form{
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    transition-property: opacity, transform;
+    transition-duration: 0.35s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.checkoutButton{
+    border-width: 0;
+    width: calc(100% - 30px);
+    height: 40px;
+    margin: 40px 15px 0;
+    background-color: #f6a4eb;
+    box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 #ffb9f6;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.checkoutInput{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border-style: none;
+    width: 100%;
+    padding: 11px 15px 11px 0;
+    color: white;
+    background-color: transparent;
+    -webkit-animation: 1ms void-animation-out;
+}
+
+::placeholder { /* WebKit, Blink, Edge */
+    color:#87BBFD;
+}
+
+.checkoutLabel{
+    width: 15%;
+    min-width: 70px;
+    padding: 11px 0;
+    color: #c4f0ff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.checkoutContainer{
+    background-color: #6772e5;
+    padding: 40px;
+    font-family: Roboto, Open Sans, Segoe UI, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.checkoutFieldset{
+    margin: 0 15px 20px;
+    padding: 0;
+    border-style: none;
+    background-color: #7795f8;
+    box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08),     inset 0 1px 0 #829fff;
+    border-radius: 4px;
+}
+
+.CardElementContainer{
+    display: block;
+    margin: 10px 0 20px 0;
+    max-width: 500px;
+    padding: 10px 50px;
+    box-shadow: rgba(50, 50, 93, 0.14902) 0px 1px 3px, rgba(0, 0, 0, 0.0196078) 0px 1px 0px;
+    border-radius: 4px;
+    background: white;
+}

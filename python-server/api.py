@@ -20,7 +20,10 @@ class Subscriptions(Resource):
 
     def post(self):
         args = parser.parse_args()
-        return {'token':args['token']}
+        response = jsonify( {'token':args['token']})
+        response.headers.add('Access-Control-Allow-Origin','*')
+        return response
+
 
 api.add_resource(Subscriptions, '/stripe/subscriptions')
 api.add_resource(ReactSite, '/')

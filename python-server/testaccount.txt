@@ -1,0 +1,17 @@
+{
+  "account_balance": 0,
+  "created": 1510703254,
+  "currency": null,
+  "default_source": null,
+  "delinquent": false,
+  "description": null,
+  "discount": null,
+  "email": "nicholas.rance@gmail.com",
+  "id": "cus_BllfSOnRSP1VEM",
+  "livemode": false,
+  "metadata": {},
+  "object": "customer",
+  "shipping": null,
+  "sources": {},
+  "subscriptions": {}
+}

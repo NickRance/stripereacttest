@@ -12,10 +12,10 @@ class CardSection extends React.Component {
                 <div className='row'>
                     <label className='checkoutLabel'>Name</label>
 
-                    <input className='checkoutInput'  type="text" placeholder="Jane Doe"/>
+                    <input id='name' className='checkoutInput'  type="text" placeholder="Jane Doe"/>
                 </div>
                 <div className='row'>
-                    <label className='checkoutLabel'>Email</label>
+                    <label id='email' className='checkoutLabel'>Email</label>
                     <input className='checkoutInput'  type="email" placeholder="jane.doe@example.com"/>
                 </div>
                 <div style={{padding:'10px'}}>

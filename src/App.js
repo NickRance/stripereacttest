@@ -7,7 +7,7 @@ import {StripeProvider} from 'react-stripe-elements';
 class App extends Component {
   render() {
       return (
-          <StripeProvider apiKey="pk_test_12345">
+          <StripeProvider apiKey="pk_test_AgSJFVIZrO3uybiIFtqm5dQV">
               <MyStoreCheckout />
           </StripeProvider>
       );

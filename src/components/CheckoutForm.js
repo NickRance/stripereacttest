@@ -25,7 +25,7 @@ class CheckoutForm extends React.Component {
 
     stripeTokenHandler = (token)=> {
         console.log('Received Stripe token:', token);
-        var myHeaders = new Headers();
+        var myHeaders = new Headers({'Access-Control-Allow-Origin':'*'});
         const myInit = { method: 'POST',
             headers: myHeaders,
             mode: 'cors',

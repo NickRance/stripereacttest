@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 from flask_restful import Resource, Api, reqparse
 import os
 
@@ -21,8 +21,8 @@ class Subscriptions(Resource):
 
     def post(self):
         args = parser.parse_args()
-        print(args['token'])
-        response = jsonify( {'token':args['token']})
+        print(request.body)
+        response = jsonify({'token':args['token']})
         response.headers.add('Access-Control-Allow-Origin','*')
         return response
 

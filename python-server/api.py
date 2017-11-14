@@ -21,7 +21,7 @@ class Subscriptions(Resource):
 
     def post(self):
         args = parser.parse_args()
-        print(request.body)
+        print(request.form)
         response = jsonify({'token':args['token']})
         response.headers.add('Access-Control-Allow-Origin','*')
         return response

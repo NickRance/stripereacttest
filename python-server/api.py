@@ -7,6 +7,7 @@ api = Api(app)
 
 parser = reqparse.RequestParser()
 parser.add_argument('token', help='stripe token submitted from web app')
+# parser.add_argument('token', type=int, location='form')
 
 class ReactSite(Resource):
     def get(self):
@@ -20,6 +21,7 @@ class Subscriptions(Resource):
 
     def post(self):
         args = parser.parse_args()
+        print(args['token'])
         response = jsonify( {'token':args['token']})
         response.headers.add('Access-Control-Allow-Origin','*')
         return response

@@ -25,7 +25,12 @@ class CheckoutForm extends React.Component {
 
     stripeTokenHandler = (token)=> {
         console.log('Received Stripe token:', token);
-        fetch('http://localhost:33507/stripe/subscriptions')
+        var myHeaders = new Headers();
+        const myInit = { method: 'POST',
+            headers: myHeaders,
+            mode: 'cors',
+            cache: 'default' };
+        fetch('https://testingstripeserver.herokuapp.com/stripe/subscriptions', myInit)
             .then((result) => {
             return(result.json());
         }).then((jsonResult) => {

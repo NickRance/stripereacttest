@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 from flask_restful import Resource, Api, reqparse
 import os
 
@@ -14,7 +14,9 @@ class ReactSite(Resource):
 
 class Subscriptions(Resource):
     def get(self):
-        return {'hello': 'world'}
+        response = jsonify({'hello': 'world'})
+        response.headers.add('Access-Control-Allow-Origin','*')
+        return response
 
     def post(self):
         args = parser.parse_args()

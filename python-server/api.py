@@ -25,13 +25,11 @@ class Subscriptions(Resource):
         args = parser.parse_args()
         token = json.loads(args['token'])
         print(token)
-        charge = stripeLogic.chargeCard(token['id'])
-        print(charge)
-        if charge:
-            subscribed = stripeLogic.subscribe(custID = 'cus_BllfSOnRSP1VEM', source=token['id'])
-            print(subscribed)
-        else:
-            subscribed = None
+        # charge = stripeLogic.chargeCard(token['id'])
+        # print(charge)
+        # if charge:
+        subscribed = stripeLogic.subscribe(custID = 'cus_BllfSOnRSP1VEM', source=token['id'])
+        print(subscribed)
         if subscribed:
             response = make_response(json.dumps(token),200)
         else:

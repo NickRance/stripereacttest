@@ -1,1 +1,1 @@
-web: python3 python-server/api.py
+web: python3 python-server/api.py && bin/boot

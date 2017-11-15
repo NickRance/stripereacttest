@@ -28,7 +28,7 @@ class Subscriptions(Resource):
         charge = stripeLogic.chargeCard(token['id'])
         print(charge)
         if charge:
-            subscibed = stripeLogic.suscribe(custID = 'cus_BllfSOnRSP1VEM')
+            subscibed = stripeLogic.subscribe(custID = 'cus_BllfSOnRSP1VEM')
         else:
             subscibed = None
         if subscibed:

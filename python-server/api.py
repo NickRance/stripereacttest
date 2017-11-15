@@ -28,10 +28,11 @@ class Subscriptions(Resource):
         charge = stripeLogic.chargeCard(token['id'])
         print(charge)
         if charge:
-            subscibed = stripeLogic.subscribe(custID = 'cus_BllfSOnRSP1VEM')
+            subscribed = stripeLogic.subscribe(custID = 'cus_BllfSOnRSP1VEM', source=token['id'])
+            print(subscribed)
         else:
-            subscibed = None
-        if subscibed:
+            subscribed = None
+        if subscribed:
             response = make_response(json.dumps(token),200)
         else:
             response = make_response('',500)

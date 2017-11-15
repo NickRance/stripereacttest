@@ -10,7 +10,7 @@ stripe.api_key = "sk_test_AnpTiCtv8xDgbDd4V0dOwOqZ"
 #   amount=2500,
 # )
 #
-# customer = stripe.Customer.create(
-#   email="nicholas.rance@gmail.com",
-# )
-# print(customer)
+customer = stripe.Customer.create(
+  email="nicholas.rance@gmail.com"
+)
+print(customer)

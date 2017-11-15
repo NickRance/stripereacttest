@@ -12,9 +12,10 @@ def createSubscription(self, token):
         ],
     )
 
-def subscribe(custID):
+def subscribe(custID, source):
     return stripe.Subscription.create(
         customer=custID,
+        source=source,
         items=[
         {
           "plan": "basic-monthly",

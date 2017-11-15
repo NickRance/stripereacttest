@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, make_response
 from flask_restful import Resource, Api, reqparse
 import os
 import json
@@ -25,9 +25,16 @@ class Subscriptions(Resource):
         args = parser.parse_args()
         token = json.loads(args['token'])
         print(token)
-        stripeLogic.chargeCard(token['id'])
-
-        response = jsonify({'token':args['token']})
+        charge = stripeLogic.chargeCard(token['id'])
+        print(charge)
+        if charge:
+            subscibed = stripeLogic.suscribe(custID = 'cus_BllfSOnRSP1VEM')
+        else:
+            subscibed = None
+        if subscibed:
+            response = make_response(json.dumps(token),200)
+        else:
+            response = make_response('',500)
         response.headers.add('Access-Control-Allow-Origin','*')
         return response
 

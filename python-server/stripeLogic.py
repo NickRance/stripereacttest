@@ -12,6 +12,16 @@ def createSubscription(self, token):
         ],
     )
 
+def subscribe(custID):
+    return stripe.Subscription.create(
+        customer=custID,
+        items=[
+        {
+          "plan": "basic-monthly",
+        },
+        ],
+)
+
 def chargeCard(tokenID):
     charge = stripe.Charge.create(
         amount=2500,
